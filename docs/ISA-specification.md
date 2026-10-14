@@ -25,3 +25,14 @@
 | x5-x8  | Nakoana      | t0-t3           | GPR  | temporaries                         |
 | x9-x15 | boloka       | s0-s6           | GPR  | Saved                               |
 | PC     | sebaka       | Program counter | SPR  | Address of current instruction      |
+
+
+
+## 2.3 Instruction Formats
+
+| 31 22            | 21 18 | 17 14 | 13 11  | 10 7            | 6 0    |
+| ---------------- | ----- | ----- | ------ | --------------- | ------ |
+| Funct7           | rs2   | rs1   | Funct3 | rd              | Opcode |
+| Imm \[13:0\]     |       | rs1   | Funct3 | rd              | opcode |
+| Imm \[13:7\]     | rs2   | rs1   | Funct3 | Imm \[6:0\]     | opcode |
+| Imm \[13\|11:5\] | rs2   | rs1   | Funct3 | Imm \[4:1\|12\] | opcode |
